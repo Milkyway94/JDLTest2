@@ -1,0 +1,23 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+name: jdltest
+services:
+  cassandra:
+    extends:
+      file: ./cassandra.yml
+      service: cassandra
+  cassandra-migration:
+    extends:
+      file: ./cassandra.yml
+      service: cassandra-migration
+  redis:
+    extends:
+      file: ./redis.yml
+      service: redis
+  consul:
+    extends:
+      file: ./consul.yml
+      service: consul
+  consul-config-loader:
+    extends:
+      file: ./consul.yml
+      service: consul-config-loader
